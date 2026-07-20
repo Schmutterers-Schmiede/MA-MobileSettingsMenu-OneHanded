@@ -24,7 +24,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/MA-MobileSettingsMenu-Right/',
+  base: '/MA-MobileSettingsMenu-OneHanded/',
   resolve: {
     alias: {
       // Alias @ to the src directory
