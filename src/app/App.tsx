@@ -1,3 +1,4 @@
+import { GRIP_IMAGES } from '../gripImages';
 import { useRef, useState } from "react";
 import {
   Wifi,
@@ -37,6 +38,7 @@ const TOGGLE_POSITION: "left" | "right" = "right";
 const MOCKUP_W = 390;
 const MOCKUP_H = 844;
 const SCALE = 0.8;
+const ctx = getContext();
 
 interface SettingItem {
   id: string;
@@ -320,9 +322,10 @@ export default function App() {
       {/* Instructions overlay, shown until participant taps Start */}
       {showInstructions && (
         <InstructionsOverlay
-          title={INSTRUCTIONS.settings.title}
-          instructions={INSTRUCTIONS.settings.text}
+          title={INSTRUCTIONS.control_center.title}
+          instructions={INSTRUCTIONS.control_center.text}
           onStart={handleStart}
+          gripImage={GRIP_IMAGES[ctx.grip]}
         />
       )}
     </div>
